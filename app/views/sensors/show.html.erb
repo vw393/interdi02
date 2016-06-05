@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pn:</strong>
+  <%= @sensor.pn %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sensor.name %>
+</p>
+
+<p>
+  <strong>Descr:</strong>
+  <%= @sensor.descr %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @sensor.size %>
+</p>
+
+
+<p>
+<% @sensor.pictures.each do |picture| %>
+<%= picture.image_file_name %>
+<%= image_tag picture.image.url(:thumb) %>
+<% end %>
+</p>
+
+<p>
+<% @sensor.attachments.each do |attachment| %>
+<%= attachment.document_file_name %>
+<%= image_tag attachment.document.url(:thumb) %>
+<% end %>
+</p>
+
+
+
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @sensor.manufacturer.name %>
+</p>
+
+<p>
+  <strong>Sensor family:</strong>
+  <%= @sensor.sensor_family.name %>
+</p>
+
+<%= link_to 'Edit', edit_sensor_path(@sensor) %> |
+<%= link_to 'Back', sensors_path %>

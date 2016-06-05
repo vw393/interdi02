@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sensor:</strong>
+  <%= @combination.sensor %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @combination.board %>
+</p>
+
+<%= link_to 'Edit', edit_combination_path(@combination) %> |
+<%= link_to 'Back', combinations_path %>

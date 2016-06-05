@@ -1,0 +1,19 @@
+<%= simple_form_for(@sensor_family) do |f| %>
+  <% if @sensor_family.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sensor_family.errors.count, "error") %> prohibited this sensor_family from being saved:</h2>
+
+      <ul>
+      <% @sensor_family.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name %>
+  <%= f.input :descr %>
+  <%= f.association :technology, :include_blank => false %>
+  <%= f.button :submit %>
+
+<% end %>

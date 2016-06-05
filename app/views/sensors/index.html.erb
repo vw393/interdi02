@@ -1,0 +1,47 @@
+
+
+<header id="list-sensors">
+  <div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sensors</h1>
+
+<table class="table table-hover custom">
+  <thead>
+    <tr>
+      <th>Pn</th>
+      <th>Name</th>
+      <th>Descr</th>
+      <th>Sensor family</th>
+      <th>Tipo sensore</th>
+      <th>Size</th>
+      <th>Manufacturer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sensors.each do |sensor| %>
+      <tr   data-link="<%= sensor_path(sensor) %>">
+        <td><%= sensor.pn %></td>
+        <td><%= sensor.name %></td>
+        <td><%= sensor.descr %></td>
+        <td><%= sensor.sensor_family.name %></td>
+        <td><%= sensor.sensor_family.technology.name%></td>
+        <td><%= sensor.size %></td>
+        <td><%= sensor.manufacturer.name %></td>
+        <td><%= link_to 'Show', sensor %></td>
+        <td><%= link_to 'Edit', edit_sensor_path(sensor) %></td>
+        <td><%= link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sensor', new_sensor_path %>
+
+  </div>
+</header>

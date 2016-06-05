@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pn:</strong>
+  <%= @board.pn %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @board.name %>
+</p>
+
+<p>
+  <strong>Descr:</strong>
+  <%= @board.descr %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= image_tag @board.image.url %>
+</p>
+
+<p>
+  <strong>Doc:</strong>
+  <a href="<%= @board.document.url %>" <b><%= File.basename(@board.document.original_filename)%></b> </a>
+</p>
+
+
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>

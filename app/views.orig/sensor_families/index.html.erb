@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sensor Families</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Descr</th>
+      <th>Technology</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sensor_families.each do |sensor_family| %>
+      <tr>
+        <td><%= sensor_family.name %></td>
+        <td><%= sensor_family.descr %></td>
+        <td><%= sensor_family.technology %></td>
+        <td><%= link_to 'Show', sensor_family %></td>
+        <td><%= link_to 'Edit', edit_sensor_family_path(sensor_family) %></td>
+        <td><%= link_to 'Destroy', sensor_family, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sensor family', new_sensor_family_path %>
