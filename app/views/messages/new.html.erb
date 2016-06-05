@@ -1,0 +1,146 @@
+
+
+
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+
+
+
+<section>
+  <div class="container">
+    
+    <div class="row">
+
+      <!-- FORM -->
+      <div class="col-md-9 col-sm-9">
+
+        <h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+
+        <%= form_for @message, url: contact_path do |message_form| %>
+
+          <fieldset>
+
+            <div class="row">
+              <div class="form-group">
+  
+                <div class="col-md-4">
+                  <div class="field">
+                    <label for="contact:name">Full Name *</label>
+                    <%= message_form.text_field :name, class: "form-control"  %>
+                  </div>
+                </div>
+        
+                <div class="col-md-4">
+                  <div class="field">
+                    <label for="contact:email">E-mail Address *</label>
+                    <%= message_form.email_field :email, class: "form-control" %>
+                  </div>
+                </div>
+        
+                <div class="col-md-4">
+                  <div class="field">
+                    <label for="contact:phone">Phone</label>
+                    <%= message_form.text_field :phone, class: "form-control" %>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+        
+            <div class="row">
+              <div class="form-group">
+  
+                <div class="col-md-8">
+                  <div class="field">
+                    <label for="contact:subject">Subject *</label>
+                    <%= message_form.text_field :subject, class: "form-control" %>
+                  </div>
+                </div>
+        
+                <div class="col-md-4">
+                  <div class="field">
+                    <label for="contact:industry">Industry</label>
+                    <%= message_form.text_field :industry, class: "form-control" %>
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+        
+            <div class="row">
+              <div class="form-group">
+  
+                <div class="col-md-12">
+                  <div class="field">
+                    <label for="contact:content">Message *</label>
+                    <%= message_form.text_area :content, rows: "8", class: "form-control" %>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+
+          </fieldset>
+  
+
+          <fieldset>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="field">
+                  <%= message_form.submit "SEND MESSAGE", class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+
+
+        <% end %>
+
+
+
+
+
+      </div>
+
+
+
+      <!-- INFO -->
+      <div class="col-md-3 col-sm-3">
+
+        <h2>Visit Us</h2>
+
+        <p>
+          Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.
+        </p>
+
+        <hr />
+
+        <p>
+          <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
+          <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
+          <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+        </p>
+
+        <hr />
+
+        <h4 class="font300">Business Hours</h4>
+        <p>
+          <span class="block"><strong>Monday - Friday:</strong> 10am to 6pm</span>
+          <span class="block"><strong>Saturday:</strong> 10am to 2pm</span>
+          <span class="block"><strong>Sunday:</strong> Closed</span>
+        </p>
+
+      </div>
+      <!-- /INFO -->
+
+
+
+
+
+    </div>
+  </div>
+</section>

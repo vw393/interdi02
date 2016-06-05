@@ -21,10 +21,14 @@ Rails.application.routes.draw do
 
     root 'home#index'
 
+    get 'contact', to: 'messages#new', as: 'contact'
+    post 'contact', to: 'messages#create'
+
   end
 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }, via: :get
   match '', to: redirect("/#{I18n.default_locale}"), via: :get
+
 
 
   # Example of regular route:

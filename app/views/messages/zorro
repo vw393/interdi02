@@ -1,0 +1,90 @@
+
+
+
+
+<section>
+  <div class="container">
+    
+    <div class="row">
+
+      <!-- FORM -->
+      <div class="col-md-9 col-sm-9">
+
+        <h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+        <%= form_for @message, url: contact_path do |message_form| %>
+          <fieldset>
+
+          <div class="row">
+            <div class="form-group">
+
+              <div class="col-md-4">
+                <div class="field">
+                  <%= message_form.text_field :name, placeholder: "Full Name *", class: "form-control"  %>
+                </div>
+              </div>
+      
+              <div class="col-md-4">
+                <div class="field">
+                  <%= message_form.email_field :email, placeholder: "E-mail Address *", class: "form-control" %>
+                </div>
+              </div>
+      
+              <div class="col-md-4">
+                <div class="field">
+                  <%= message_form.text_field :phone, placeholder: "Phone", class: "form-control" %>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="form-group">
+
+              <div class="col-md-8">
+                <div class="field">
+                  <%= message_form.text_field :subject, placeholder: "Subject *", class: "form-control" %>
+                </div>
+              </div>
+      
+              <div class="col-md-4">
+                <div class="field">
+                  <%= message_form.text_field :industry, placeholder: "Industry", class: "form-control" %>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="form-group">
+
+              <div class="field">
+                <%= message_form.text_area :content, placeholder: "Message *", class: "form-control" %>
+              </div>
+
+
+            </div>
+          </div>
+
+  </fieldset>
+  
+
+
+  <fieldset>
+    <div class="field">
+      <%= message_form.submit "Send" %>
+    </div>
+  </fieldset>
+
+
+<% end %>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
