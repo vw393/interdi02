@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'home/index'
 
+  devise_for :users
+
+##  get 'home/index'
 
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+
+    get 'home', to: 'home#index'
 
     resources :combinations
     resources :boards
@@ -25,6 +28,7 @@ Rails.application.routes.draw do
     post 'contact', to: 'messages#create'
 
   end
+
 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }, via: :get
   match '', to: redirect("/#{I18n.default_locale}"), via: :get

@@ -28,6 +28,15 @@ class SensorsController < ApplicationController
 
     respond_to do |format|
       if @sensor.save
+
+        if params[:images]
+          params[:images].each { |image| @sensor.pictures.create(image: image) }
+        end
+
+        if params[:documents]
+          params[:documents].each { |document| @sensor.attachments.create(document: document) }
+        end
+
         format.html { redirect_to @sensor, notice: 'Sensor was successfully created.' }
         format.json { render :show, status: :created, location: @sensor }
       else

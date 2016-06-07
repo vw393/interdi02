@@ -19,6 +19,11 @@
   <!-- CORE CSS -->
   <link href="/assets/smarty/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+  <!-- REVOLUTION SLIDER -->
+  <link href="/assets/smarty/slider.revolution/extralayers.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/smarty/slider.revolution/settings.css" rel="stylesheet" type="text/css" />
+
+
   <!-- SWIPER SLIDER -->
   <link href="/assets/smarty/swiper.min.css" rel="stylesheet" type="text/css" />
 
@@ -754,7 +759,7 @@
 										</ul>
 									</li>
 									<li>
-										<a href="#">CONTATTI</a>
+										<a href="/contact">CONTATTI</a>
 									</li>
 								</ul>
 
@@ -968,6 +973,11 @@
   <!-- SWIPER SLIDER -->
   <script type="text/javascript" src="/assets/smarty/swiper.min.js"></script>
   <script type="text/javascript" src="/assets/smarty/demo.swiper_slider.js"></script>
+
+  <!-- REVOLUTION SLIDER -->
+  <script type="text/javascript" src="/assets/smarty/slider.revolution/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="/assets/smarty/slider.revolution/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="/assets/smarty/demo.revolution_slider.js"></script>
 
 </body>
 </html>
