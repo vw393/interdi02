@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!--[if IE 8]>      <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>      <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>INTERDIPROS S.r.l. - 404 Page not found</title>
+  <meta name="keywords" content="HTML5,CSS3,Template" />
+  <meta name="description" content="" />
+  <meta name="Author" content="Luca Pizzinato [www.eraproject.it]" />
+
+  <!-- mobile settings -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+  <!--[if gte IE 9]> <style type="text/css"> .gradient { filter: none; } </style> <![endif]-->
+
+  <!-- WEB FONTS : use %7C instead of | (pipe) -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+  <!-- CORE CSS -->
+  <link href="/assets/smarty/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- REVOLUTION SLIDER -->
+  <link href="/assets/smarty/slider.revolution/extralayers.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/smarty/slider.revolution/settings.css" rel="stylesheet" type="text/css" />
+
+
+  <!-- SWIPER SLIDER -->
+  <link href="/assets/smarty/swiper.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- THEME CSS -->
+  <link href="/assets/smarty/essentials.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/smarty/layout.css" rel="stylesheet" type="text/css" />
+
+  <!-- PAGE LEVEL SCRIPTS -->
+  <link href="/assets/smarty/header-1.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/smarty/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+  <!-- ERROR PAGE -->
+  <link href="/assets/errors.scss" rel="stylesheet" type="text/css" />
+
+<!--
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+-->
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body class="smoothscroll enable-animation">
+
+
+  <!-- SLIDE TOP -->
+  <div id="slidetop">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <h6><i class="icon-heart"></i> WHY SMARTY?</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
+        </div>
+
+        <div class="col-md-4">
+          <h6><i class="icon-attachment"></i> RECENTLY VISITED</h6>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+          <ul class="list-unstyled">
+            <li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
+            <li><b>Phone:</b> 1-800-565-2390</li>
+            <li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+  </div>
+  <!-- /SLIDE TOP -->
+
+
+
+  <!-- wrapper -->
+  <div id="wrapper">
+
+    <!-- Top Bar -->
+    <div id="topBar" class="dark">
+      <div class="container">
+
+        <!-- right -->
+        <ul class="top-links list-inline pull-right">
+
+          <% if current_user %> 
+            <li class="text-welcome hidden-xs">Logged in as: <strong><%= current_user.email %> </strong></li>
+            <li class="text-welcome hidden-xs"><strong> <%= button_to("Logout", destroy_user_session_path, :method => "delete") %>  </strong></li>
+          <% end %> 
+
+          <li class="hidden-xs"><a href="help.html"><%= t ".help"%></a></li>
+          <li class="hidden-xs"><a href="sitemap.html">Sitemap</a></li>
+          <li class="hidden-xs"><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <!-- left -->
+        <ul class="top-links list-inline">
+          <li>
+
+            <%= link_to(image_tag(@locale_flag, width: "16", height: "11", alt: "lang", class: "flag-lang") + @locale_name, locale: @locale_abbr ) %>
+
+            <ul class="dropdown-langs dropdown-menu">
+              <li><%= link_to(image_tag("/assets/flags/us.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " ENGLISH", home_path(locale: "en")) %></li>
+              <li class="divider"></li>
+              <li><%= link_to(image_tag("/assets/flags/it.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " ITALIANO", home_path(locale: "it")) %></li>
+              <li class="divider"></li>
+              <li><%= link_to(image_tag("/assets/flags/de.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " DEUTSCH", home_path(locale: "de")) %></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- /Top Bar -->
+  
+  
+
+
+
+    <!-- 
+      AVAILABLE HEADER CLASSES
+
+      Default nav height: 96px
+      .header-md     = 70px nav height
+      .header-sm     = 60px nav height
+
+      .noborder     = remove bottom border (only with transparent use)
+      .transparent  = transparent header
+      .translucent  = translucent header
+      .sticky      = sticky header
+      .static      = static header
+      .dark      = dark header
+      .bottom      = header on bottom
+      
+      shadow-before-1 = shadow 1 header top
+      shadow-after-1   = shadow 1 header bottom
+      shadow-before-2 = shadow 2 header top
+      shadow-after-2   = shadow 2 header bottom
+      shadow-before-3 = shadow 3 header top
+      shadow-after-3   = shadow 3 header bottom
+
+      .clearfix    = required for mobile menu, do not remove!
+
+      Example Usage:  class="clearfix sticky header-sm transparent noborder"
+    -->
+    <div id="header" class="sticky clearfix">
+
+
+
+      <!-- SEARCH HEADER -->
+      <div class="search-box over-header">
+        <a id="closeSearch" href="#" class="glyphicon glyphicon-remove"></a>
+
+        <form action="page-search-result-1.html" method="get">
+          <input type="text" class="form-control" placeholder="SEARCH" />
+        </form>
+      </div> 
+      <!-- /SEARCH HEADER -->
+
+
+
+      <!-- TOP NAV -->
+      <header id="topNav">
+        <div class="container">
+
+          <!-- Mobile Menu Button -->
+          <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- BUTTONS -->
+          <ul class="pull-right nav nav-pills nav-second-main">
+
+            <!-- SEARCH -->
+            <li class="search">
+              <a href="javascript:;">
+                <i class="fa fa-search"></i>
+              </a>
+            </li>
+            <!-- /SEARCH -->
+
+
+          </ul>
+          <!-- /BUTTONS -->
+
+
+          <!-- Logo -->
+          <a class="logo pull-left" href="index.html">
+            <img src="/assets/logo_Interdi_transp_300x99_wgutter.png" alt="" />
+          </a>
+
+
+          <!-- 
+            Top Nav 
+            
+            AVAILABLE CLASSES:
+            submenu-dark = dark sub menu
+          -->
+          <div class="navbar-collapse pull-right nav-main-collapse collapse">
+            <nav class="nav-main">
+
+              <!--
+                NOTE
+                
+                For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+                Direct Link Example: 
+
+                <li>
+                  <a href="#">MYLINK</a>
+                </li>
+              -->
+              <ul id="topMain" class="nav nav-pills nav-main">
+
+                <% if current_user %>
+                  <li>
+                    <a class="adminlink" href="/admin">ADMIN</a>
+                  </li>
+                <% end %>
+
+
+                <li>
+                  <a href="/home">HOME</a>
+                </li>
+
+                <li class="dropdown"><!-- PRODUCTS -->
+
+                  <a class="dropdown-toggle" href="#">
+                    PRODUCTS
+                  </a>
+
+                  <ul class="dropdown-menu">
+
+                    <li class="dropdown">
+                      <%= link_to "SENSORI TOUCHSCREEN RESISTIVI", sensors_path(:technology => 1, :pagetitle => "SENSORI TOUCHSCREEN RESISTIVI"), class: "dropdown-toggle" %>
+                      <ul class="dropdown-menu">
+                        <li><%= link_to "SENSORI RESISTIVI 4 FILI", sensors_path(:subtechnology => 1, :pagetitle => "SENSORI TOUCHSCREEN RESISTIVI 4 FILI")%></li>
+                        <li><%= link_to "SENSORI RESISTIVI 5 FILI", sensors_path(:subtechnology => 2, :pagetitle => "SENSORI TOUCHSCREEN RESISTIVI 5 FILI")%></li>
+                        <li><%= link_to "SENSORI RESISTIVI GFG"   , sensors_path(:subtechnology => 3, :pagetitle => "SENSORI TOUCHSCREEN RESISTIVI GFG"), data: { toggle: "tooltip", placement: "top", title: "Glass Film Glass" }%></li>
+                        <li><%= link_to "SENSORI RESISTIVI TF"   , sensors_path(:subtechnology => 4, :pagetitle => "SENSORI TOUCHSCREEN RESISTIVI TF"), data: { toggle: "tooltip", placement: "top", title: "True Flat" }%></li>
+                        <li><%= link_to "SENSORI RESISTIVI MULTI-TOUCH", sensors_path(:subtechnology => 5, :pagetitle => "SENSORI TOUCHSCREEN RESISTIVI MULTI-TOUCH") %></li>
+                      </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                      <%= link_to "SENSORI TOUCHSCREEN CAPACITIVI", sensors_path(:technology => 2, :pagetitle => "SENSORI TOUCHSCREEN CAPACITIVI"), class: "dropdown-toggle" %>
+                      <ul class="dropdown-menu">
+                        <li><%= link_to "SENSORI CAPACITIVI PCT w/ COVER", sensors_path(:subtechnology => 6, :pagetitle => "SENSORI TOUCH PROJECTED CAPACITY con cover"), data: { toggle: "tooltip", placement: "top", title: "Projected Capacity Touch w/ cover" } %></li>
+                        <li><%= link_to "SENSORI CAPACITIVI PCT w/o COVER", sensors_path(:subtechnology => 7, :pagetitle => "SENSORI TOUCH PROJECTED CAPACITY senza cover"), data: { toggle: "tooltip", placement: "top", title: "Projected Capacity Touch w/o cover" } %></li>
+                        <li><%= link_to "SENSORI CAPACITIVI SURFACE", sensors_path(:subtechnology => 8, :pagetitle => "SENSORI CAPACITIVI SURFACE") %></li>
+                        <li><%= link_to "SENSORI CAPACITIVI FOIL", sensors_path(:subtechnology => 9, :pagetitle => "SENSORI CAPACITIVI FOIL") %></li>
+                        <li><%= link_to "SENSORI CAPACITIVI ITO FOIL", sensors_path(:subtechnology => 10, :pagetitle => "SENSORI CAPACITIVI ITO FOIL") %></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown">
+                      <%= link_to "SENSORI TOUCHSCREEN SAW", sensors_path(:technology => 3) %>
+                    </li>
+
+                    <li class="dropdown">
+                      <%= link_to "SENSORI TOUCHSCREEN INFRARED", sensors_path(:technology => 4) %>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li class="dropdown">
+                      <%= link_to "TOUCH CONTROLLERS" %>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li class="dropdown">
+                      <%= link_to "CAVI", class: "dropdown-toggle" %>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li class="dropdown">
+                      <%= link_to "ADATTATORI" %>
+                    </li>
+
+                  </ul>
+                </li>
+
+
+                <li>
+                  <a href="/technology">TECHNOLOGIES</a>
+                </li>
+
+                <li>
+                  <a href="/contact">CONTATTI</a>
+                </li>
+              </ul>
+
+            </nav>
+          </div>
+
+        </div>
+      </header>
+      <!-- /Top Nav -->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%= yield %>
+
+
+
+  
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="container">
+  
+        <div class="row">
+              
+          <div class="col-md-3">
+            <!-- Footer Logo -->
+            <img class="footer-logo" src="/assets/logo_Interdi_transp_invers_180x43.png" alt="" />
+  
+            <!-- Small Description -->
+            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+  
+            <!-- Contact Address -->
+            <address>
+              <ul class="list-unstyled">
+                <li class="footer-sprite address">
+                  PO Box 21132<br>
+                  Here Weare St, Melbourne<br>
+                  Vivas 2355 Australia<br>
+                </li>
+                <li class="footer-sprite phone">
+                  Phone: 1-800-565-2390
+                </li>
+                <li class="footer-sprite email">
+                  <a href="mailto:support@yourname.com">support@yourname.com</a>
+                </li>
+              </ul>
+            </address>
+            <!-- /Contact Address -->
+  
+          </div>
+  
+          <div class="col-md-3">
+  
+            <!-- Latest Blog Post -->
+            <h4 class="letter-spacing-1">LATEST NEWS</h4>
+            <ul class="footer-posts list-unstyled">
+              <li>
+                <a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+                <small>29 June 2015</small>
+              </li>
+              <li>
+                <a href="#">Nullam id dolor id nibh ultricies</a>
+                <small>29 June 2015</small>
+              </li>
+              <li>
+                <a href="#">Duis mollis, est non commodo luctus</a>
+                <small>29 June 2015</small>
+              </li>
+            </ul>
+            <!-- /Latest Blog Post -->
+  
+          </div>
+  
+          <div class="col-md-2">
+  
+            <!-- Links -->
+            <h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+            <ul class="footer-links list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Our Clients</a></li>
+              <li><a href="#">Our Pricing</a></li>
+              <li><a href="#">Smarty Tour</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <!-- /Links -->
+  
+          </div>
+  
+          <div class="col-md-4">
+  
+            <!-- Newsletter Form -->
+            <h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+            <p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+  
+            <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+                <span class="input-group-btn">
+                  <button class="btn btn-success" type="submit">Subscribe</button>
+                </span>
+              </div>
+            </form>
+            <!-- /Newsletter Form -->
+  
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+              <a href="#" class="social-icon social-icon-border social-facebook pull-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+  
+                <i class="icon-facebook"></i>
+                <i class="icon-facebook"></i>
+              </a>
+  
+              <a href="#" class="social-icon social-icon-border social-twitter pull-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+                <i class="icon-twitter"></i>
+                <i class="icon-twitter"></i>
+              </a>
+  
+              <a href="#" class="social-icon social-icon-border social-gplus pull-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+                <i class="icon-gplus"></i>
+                <i class="icon-gplus"></i>
+              </a>
+  
+              <a href="#" class="social-icon social-icon-border social-linkedin pull-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                <i class="icon-linkedin"></i>
+                <i class="icon-linkedin"></i>
+              </a>
+  
+              <a href="#" class="social-icon social-icon-border social-rss pull-left" data-toggle="tooltip" data-placement="top" title="Rss">
+                <i class="icon-rss"></i>
+                <i class="icon-rss"></i>
+              </a>
+            
+            </div>
+            <!-- /Social Icons -->
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="copyright">
+        <div class="container">
+          <ul class="pull-right nomargin list-inline mobile-block">
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li>&bull;</li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+          &copy; All Rights Reserved, Company LTD
+        </div>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
+  
+  
+
+  </div>
+  <!-- /wrapper -->
+
+
+
+  <!-- SCROLL TO TOP -->
+  <a href="#" id="toTop"></a>
+
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="inner">
+      <span class="loader"></span>
+    </div>
+  </div><!-- /PRELOADER -->
+
+
+  <!-- JAVASCRIPT FILES -->
+  <script type="text/javascript">var plugin_path = '/assets/smarty/';</script>
+  <script type="text/javascript" src="/assets/smarty/jquery/jquery-2.1.4.min.js"></script>
+
+  <script type="text/javascript" src="/assets/smarty/scripts.js"></script>
+    
+  <!-- STYLESWITCHER - REMOVE
+  <script async type="text/javascript" src="/assets/smarty/styleswitcher/styleswitcher.js"></script>
+  -->
+
+  <!-- SWIPER SLIDER -->
+  <script type="text/javascript" src="/assets/smarty/swiper.min.js"></script>
+  <script type="text/javascript" src="/assets/smarty/demo.swiper_slider.js"></script>
+
+  <!-- REVOLUTION SLIDER -->
+  <script type="text/javascript" src="/assets/smarty/slider.revolution/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="/assets/smarty/slider.revolution/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="/assets/smarty/demo.revolution_slider.js"></script>
+
+</body>
+</html>

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'errors/not_found'
+
+  get 'errors/internal_server_error'
+
 ##  get 'home/index'
 
     get 'prova', to: 'home#prova'
@@ -32,6 +36,8 @@ Rails.application.routes.draw do
 
   end
 
+  match "/404", :to => "errors#not_found", :via => :all
+  match "/500", :to => "errors#internal_server_error", :via => :all
 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }, via: :get
   match '', to: redirect("/#{I18n.default_locale}"), via: :get

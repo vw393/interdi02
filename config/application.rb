@@ -28,5 +28,7 @@ module Interdi
 
     config.web_console.whitelisted_ips = '192.168.61.0/24'
 
+    config.exceptions_app = self.routes
+
   end
 end
