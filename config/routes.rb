@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_for :users
 
 ##  get 'home/index'
 
+    get 'prova', to: 'home#prova'
+
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+
+    devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
 
     get 'home', to: 'home#index'
 

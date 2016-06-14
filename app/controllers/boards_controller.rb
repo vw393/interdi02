@@ -28,6 +28,15 @@ class BoardsController < ApplicationController
 
     respond_to do |format|
       if @board.save
+
+        if params[:images]
+          params[:images].each { |image| @board.pictures.create(image: image) }
+        end
+
+        if params[:documents]
+          params[:documents].each { |document| @board.attachments.create(document: document) }
+        end
+
         format.html { redirect_to @board, notice: 'Board was successfully created.' }
         format.json { render :show, status: :created, location: @board }
       else
@@ -35,6 +44,7 @@ class BoardsController < ApplicationController
         format.json { render json: @board.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /boards/1

@@ -4,7 +4,14 @@ class SensorsController < ApplicationController
   # GET /sensors
   # GET /sensors.json
   def index
-    @sensors = Sensor.all
+##  @sensors = ( params[:technology] ? Technology.find(params[:technology]).sensors : Sensor.all )
+    if (params[:technology])
+       @sensors = Technology.find(params[:technology]).sensors
+    elsif (params[:subtechnology])
+       @sensors = SensorFamily.find(params[:subtechnology]).sensors
+    else
+       @sensors = Sensor.all
+    end
   end
 
   # GET /sensors/1

@@ -82,10 +82,10 @@ jQuery(document).ready(function() {
 
 				+ '		<p class="nomargin-bottom">Images for Boxed Version</p>'
 				+ '		<button onclick="background_switch(\'none\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/none.jpg" width="27" height="27" alt="" /></button>'
-				+ '		<button onclick="background_switch(\'assets/images/demo/boxed_background/1.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/1_thumb.jpg" width="27" height="27" alt="" /></button>'
-				+ '		<button onclick="background_switch(\'assets/images/demo/boxed_background/2.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/2_thumb.jpg" width="27" height="27" alt="" /></button>'
-				+ '		<button onclick="background_switch(\'assets/images/demo/boxed_background/3.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/3_thumb.jpg" width="27" height="27" alt="" /></button>'
-				+ '		<button onclick="background_switch(\'assets/images/demo/boxed_background/4.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/4_thumb.jpg" width="27" height="27" alt="" /></button>'
+				+ '		<button onclick="background_switch(\'/assets/boxed_background/1.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/1_thumb.jpg" width="27" height="27" alt="" /></button>'
+				+ '		<button onclick="background_switch(\'/assets/boxed_background/2.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/2_thumb.jpg" width="27" height="27" alt="" /></button>'
+				+ '		<button onclick="background_switch(\'/assets/boxed_background/3.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/3_thumb.jpg" width="27" height="27" alt="" /></button>'
+				+ '		<button onclick="background_switch(\'/assets/boxed_background/4.jpg\');" class="pointer switcher_thumb"><img src="/assets/boxed_background/4_thumb.jpg" width="27" height="27" alt="" /></button>'
 
 				+ '		<hr />'
 
@@ -138,11 +138,11 @@ jQuery(document).ready(function() {
 			jQuery("#css_dark_skin").remove();
 			jQuery("head").append('<link id="css_dark_skin" href="assets/css/layout-dark.css" rel="stylesheet" type="text/css" title="dark" />');
 			createCookie("color_skin", 'dark', 365);
-			jQuery("a.logo img").attr('src', 'assets/images/logo_light.png');
+			jQuery("a.logo img").attr('src', '/assets/logo_light.png');
 		} else {
 			jQuery("#css_dark_skin").remove();
 			createCookie("color_skin", '', -1);
-			jQuery("a.logo img").attr('src', 'assets/images/logo_dark.png');
+			jQuery("a.logo img").attr('src', '/assets/logo_dark.png');
 		}
 	});
 
@@ -215,9 +215,9 @@ jQuery(document).ready(function() {
 	/** ********************************************************************************************************** **/
 	function setActiveStyleSheet(title) {
 		if(title != 'null' && title != null) {
-			jQuery("#color_scheme").attr('href', 'assets/css/color_scheme/' + title + '.css');
+			jQuery("#color_scheme").attr('href', '/assets/css/color_scheme/' + title + '.css');
 			if(jQuery("#css_dark_skin").length < 1) {
-				// jQuery("a.logo img").attr('src', 'assets/images/demo/logo/' + title + '.png');
+				// jQuery("a.logo img").attr('src', '/assets/logo/' + title + '.png');
 			}
 			createCookie("style", title, 365);
 
@@ -229,7 +229,7 @@ jQuery(document).ready(function() {
 				jQuery("#css_dark_skin").remove();
 				jQuery("head").append('<link id="css_dark_skin" href="assets/css/layout-dark.css" rel="stylesheet" type="text/css" title="dark" />');
 				jQuery("#is_dark").trigger('click');
-				jQuery("a.logo img").attr('src', 'assets/images/logo_dark.png');
+				jQuery("a.logo img").attr('src', '/assets/logo_dark.png');
 			}
 			**/
 		}
@@ -395,7 +395,7 @@ jQuery(document).ready(function() {
 		jQuery("#css_dark_skin").remove();
 		jQuery('body').attr('data-background', '');
 		jQuery('.backstretch').remove();
-		jQuery("a.logo img").attr('src', 'assets/images/logo.png');
+		jQuery("a.logo img").attr('src', '/assets/logo.png');
 
 		jQuery("#is_light").trigger('click');
 		jQuery("#is_wide").trigger('click');

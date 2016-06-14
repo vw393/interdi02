@@ -46,6 +46,7 @@ group :development do
 end
 
 
+
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
@@ -53,6 +54,7 @@ gem 'simple_form'
 
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'devise-i18n'
 
 gem 'globalize', '~> 5.0.1'
 

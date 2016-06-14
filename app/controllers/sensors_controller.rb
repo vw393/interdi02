@@ -4,7 +4,13 @@ class SensorsController < ApplicationController
   # GET /sensors
   # GET /sensors.json
   def index
-    @sensors = Technology.find(params[:technology]).sensors
+    if (params[:technology])
+       @sensors = Technology.find(params[:technology]).sensors
+    elsif (params[:subtechnology])
+       @sensors = SensorFamily.find(params[:subtechnology]).sensors
+    else
+       @sensors = Sensor.all
+    end
   end
 
   # GET /sensors/1
@@ -28,10 +34,6 @@ class SensorsController < ApplicationController
 
     respond_to do |format|
       if @sensor.save
-
-        if params[:images]
-          params[:images].each { |image| @sensor.pictures.create(image: image) }
-        end
 
         if params[:documents]
           params[:documents].each { |document| @sensor.attachments.create(document: document) }

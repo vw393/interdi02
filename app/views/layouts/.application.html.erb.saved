@@ -107,17 +107,14 @@
         <ul class="top-links list-inline">
           <li>
 
-<!--
-            <%= link_to(image_tag(@locale_flag, width: "16", height: "11", alt: "lang", class: "flag-lang") + @locale_name, locale: "it", class: "dropdown-toggle no-text-underline", data: { toggle: "dropdown"}) %>
--->
             <%= link_to(image_tag(@locale_flag, width: "16", height: "11", alt: "lang", class: "flag-lang") + @locale_name, locale: @locale_abbr ) %>
 
             <ul class="dropdown-langs dropdown-menu">
-              <li><%= link_to(image_tag("/assets/flags/us.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " ENGLISH", locale: "en") %></li>
+              <li><%= link_to(image_tag("/assets/flags/us.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " ENGLISH", home_path(locale: "en")) %></li>
               <li class="divider"></li>
-              <li><%= link_to(image_tag("/assets/flags/it.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " ITALIANO", locale: "it") %></li>
+              <li><%= link_to(image_tag("/assets/flags/it.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " ITALIANO", home_path(locale: "it")) %></li>
               <li class="divider"></li>
-              <li><%= link_to(image_tag("/assets/flags/de.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " DEUTSCH", locale: "de") %></li>
+              <li><%= link_to(image_tag("/assets/flags/de.png", width: "16", height: "11", alt: "lang", class: "flag-lang") + " DEUTSCH", home_path(locale: "de")) %></li>
             </ul>
           </li>
         </ul>
@@ -237,56 +234,57 @@
                   <ul class="dropdown-menu">
 
                     <li class="dropdown">
-                      <a class="dropdown-toggle" href="/sensors"> TOUCHSCREEN RESISTIVI </a>
+                      <%= link_to "SENSORI TOUCHSCREEN RESISTIVI", sensors_path(:technology => 1), class: "dropdown-toggle" %>
                       <ul class="dropdown-menu">
-                        <li><a href="index-corporate-1.html">TOUCHSCREEN RESISTIVI 4 FILI</a></li>
-                        <li><a href="index-corporate-2.html">TOUCHSCREEN RESISTIVI 5 FILI</a></li>
-                        <li><a href="index-corporate-3.html" data-toggle="tooltip" data-placement="top" title="Glass Film Glass">TOUCHSCREEN RESISTIVI GFG</a></li>
-                        <li><a href="index-corporate-4.html" data-toggle="tooltip" data-placement="top" title="True Flat">TOUCHSCREEN RESISTIVI TF</a></li>
-                        <li><a href="index-corporate-5.html">TOUCHSCREEN RESISTIVI MULTI-TOUCH</a></li>
+                        <li><a href="index-corporate-1.html">SENSORI RESISTIVI 4 FILI</a></li>
+                        <li><a href="index-corporate-2.html">SENSORI RESISTIVI 5 FILI</a></li>
+                        <li><a href="index-corporate-3.html" data-toggle="tooltip" data-placement="top" title="Glass Film Glass">SENSORI RESISTIVI GFG</a></li>
+                        <li><a href="index-corporate-4.html" data-toggle="tooltip" data-placement="top" title="True Flat">SENSORI RESISTIVI TF</a></li>
+                        <li><a href="index-corporate-5.html">SENSORI RESISTIVI MULTI-TOUCH</a></li>
+                      </ul>
+                    </li>
+
+                    
+                    <li class="dropdown">
+                      <%= link_to "SENSORI TOUCHSCREEN CAPACITIVI", sensors_path(:technology => 2), class: "dropdown-toggle" %>
+                      <ul class="dropdown-menu">
+                        <li><a href="index-corporate-1.html" data-toggle="tooltip" data-placement="top" title="Projected Capacity Touch w/ cover">SENSORI CAPACITIVI PCT w/ COVER</a></li>
+                        <li><a href="index-corporate-1.html" data-toggle="tooltip" data-placement="top" title="Projected Capacity Touch w/o cover">SENSORI CAPACITIVI PCT w/o COVER</a></li>
+                        <li><a href="index-corporate-3.html">SENSORI SURFACE CAPACITIVI</a></li>
+                        <li><a href="index-corporate-4.html">SENSORI PROJECTED CAPACITIVI</a></li>
+                        <li><a href="index-corporate-5.html">SENSORI CAPACITIVI ITO FOIL</a></li>
                       </ul>
                     </li>
 
                     <li class="dropdown">
-                      <a class="dropdown-toggle" href="#"> HOME ONE PAGE </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index-onepage-default.html">ONE PAGE - DEFAULT</a></li>
-                        <li><a href="index-onepage-revolution.html">ONE PAGE - REVOLUTION</a></li>
-                        <li><a href="index-onepage-image.html">ONE PAGE - IMAGE</a></li>
-                        <li><a href="index-onepage-parallax.html">ONE PAGE - PARALLAX</a></li>
-                        <li><a href="index-onepage-youtube.html">ONE PAGE - YOUTUBE</a></li>
-                        <li><a href="index-onepage-text-rotator.html">ONE PAGE - TEXT ROTATOR</a></li>
-                        <li><a href="start.html#onepage"><span class="label label-success pull-right">new</span> 10+ MORE LAYOUTS</a></li>
-                      </ul>
+                      <%= link_to "SENSORI TOUCHSCREEN SAW", sensors_path(:technology => 3) %>
                     </li>
-                    <li class="divider"></li>
+
                     <li class="dropdown">
-                      <a class="dropdown-toggle" href="#">
-                        HOME - THEMATICS <i class="fa fa-heart margin-left-10"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index-thematics-restaurant.html">HOME - RESTAURANT</a></li>
-                        <li><a href="index-thematics-education.html">HOME - EDUCATION</a></li>
-                        <li><a href="index-thematics-construction.html">HOME - CONSTRUCTION</a></li>
-                        <li><a href="index-thematics-medical.html">HOME - MEDICAL</a></li>
-                        <li><a href="index-thematics-church.html">HOME - CHURCH</a></li>
-                        <li><a href="index-thematics-fashion.html">HOME - FASHION</a></li>
-                        <li><a href="index-thematics-wedding.html">HOME - WEDDING</a></li>
-                        <li><a href="index-thematics-events.html">HOME - EVENTS</a></li>
-                        <li><a href="index-thematics-hosting.html">HOME - HOSTING</a></li>
-                        <li><a href="index-thematics-lawyer.html">HOME - LAWYER</a></li>
-                      <li><a href="http://www.stepofweb.com/propose-design.html" data-toggle="tooltip" data-placement="top" title="Do you need a specific home design? We can include it in the next update!" target="_blank"><span class="label label-danger pull-right">hot</span> PROPOSE THEMATIC</a></li>
-                      </ul>
+                      <%= link_to "SENSORI TOUCHSCREEN INFRARED", sensors_path(:technology => 4) %>
                     </li>
+
                     <li class="divider"></li>
-                    <li><a href="start.html#newrevslider" data-toggle="tooltip" data-placement="top" title="39 More Revolution Slider V5"><span class="label label-danger pull-right">new</span> 39 MORE LAYOUTS</a></li>
+
+                    <li class="dropdown">
+                      <%= link_to "TOUCH CONTROLLERS" %>
+                    </li>
+
                     <li class="divider"></li>
-                    <li><a href="index-simple-revolution.html">HOME SIMPLE - REVOLUTION</a></li>
-                    <li><a href="index-simple-layerslider.html">HOME SIMPLE - LAYERSLIDER</a></li>
-                    <li><a href="index-simple-parallax.html">HOME SIMPLE - PARALLAX</a></li>
-                    <li><a href="index-simple-youtube.html">HOME SIMPLE - YOUTUBE</a></li>
+
+                    <li class="dropdown">
+                      <%= link_to "CAVI", class: "dropdown-toggle" %>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li class="dropdown">
+                      <%= link_to "ADATTATORI" %>
+                    </li>
+
                   </ul>
                 </li>
+
                 <li class="dropdown"><!-- PAGES -->
                   <a class="dropdown-toggle" href="#">
                     PAGES

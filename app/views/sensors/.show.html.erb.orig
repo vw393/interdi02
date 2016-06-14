@@ -1,0 +1,58 @@
+
+
+
+<section class="page-header page-header-xs">
+	<div class="container">
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pn:</strong>
+  <%= @sensor.pn %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sensor.name %>
+</p>
+
+<p>
+  <strong>Descr:</strong>
+  <%= @sensor.descr %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @sensor.size %>
+</p>
+
+
+<p>
+<ol>
+  <% @sensor.attachments.each do |attachment| %>
+  <li>FILE NAME: <%= attachment.document_file_name %> | <%= attachment.document_content_type %></li>
+  <% end %>
+</ol>
+</p>
+
+
+
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @sensor.manufacturer.name %>
+</p>
+
+<p>
+  <strong>Sensor family:</strong>
+  <%= @sensor.sensor_family.name %>
+</p>
+
+<%= link_to 'Edit', edit_sensor_path(@sensor) %> |
+<%= link_to 'Back', sensors_path %>
+
+
+</div>
+</section>

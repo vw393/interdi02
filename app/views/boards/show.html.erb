@@ -15,15 +15,22 @@
   <%= @board.descr %>
 </p>
 
+
+
 <p>
-  <strong>Img:</strong>
-  <%= image_tag @board.image.url %>
+<% @board.pictures.each do |picture| %>
+<%= picture.image_file_name %>
+<%= image_tag picture.image.url(:thumb) %>
+<% end %>
 </p>
 
 <p>
-  <strong>Doc:</strong>
-  <a href="<%= @board.document.url %>" <b><%= File.basename(@board.document.original_filename)%></b> </a>
+<% @board.attachments.each do |attachment| %>
+<%= attachment.document_file_name %>
+<%= image_tag attachment.document.url(:thumb) %>
+<% end %>
 </p>
+
 
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
