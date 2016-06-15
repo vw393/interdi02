@@ -18,7 +18,7 @@ html {
   width: 310px;
   height: 310px;
   margin: 155px auto; }
-  .error-page-wrap:before {
+.error-page-wrap:before {
     box-shadow: 0 0 200px 150px #fff;
     width: 310px;
     height: 310px;
@@ -43,7 +43,7 @@ html {
   background: -ms-linear-gradient(top, #d36242 0%, darkred 100%);
   background: linear-gradient(to bottom, #d36242 0%, darkred 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$firstColor', endColorstr='$secondColor',GradientType=0 ); }
-  .error-page:before {
+.error-page:before {
     width: 63px;
     height: 63px;
     border-radius: 50%;
@@ -54,7 +54,7 @@ html {
     position: relative;
     top: -19px;
     left: 44px; }
-  .error-page:after {
+.error-page:after {
     width: 310px;
     height: 17px;
     margin: 0 auto;
@@ -70,12 +70,12 @@ html {
     background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(35, 26, 26, 0) 59%, rgba(60, 44, 44, 0) 100%);
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 0%, rgba(35, 26, 26, 0) 59%, rgba(60, 44, 44, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#003c2c2c',GradientType=1 ); }
-  .error-page h1 {
+.error-page h1 {
     color: rgba(255, 255, 255, 0.94);
     font-size: 100px;
     margin: 65px auto 0 auto;
     text-shadow: 0px 0 7px rgba(0, 0, 0, 0.5); }
-    .error-page h1:before {
+.error-page h1:before {
       width: 260px;
       height: 1px;
       position: relative;
@@ -90,7 +90,7 @@ html {
       background: -ms-radial-gradient(center, ellipse cover, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
       background: radial-gradient(ellipse at center, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a66f1919', endColorstr='#003c2c2c',GradientType=1 ); }
-    .error-page h1:after {
+.error-page h1:after {
       width: 260px;
       height: 1px;
       content: '';
@@ -106,10 +106,10 @@ html {
       background: -ms-radial-gradient(center, ellipse cover, rgba(247, 173, 148, 0.65) 0%, rgba(255, 255, 255, 0.01) 99%, rgba(255, 255, 255, 0) 100%);
       background: radial-gradient(ellipse at center, rgba(247, 173, 148, 0.65) 0%, rgba(255, 255, 255, 0.01) 99%, rgba(255, 255, 255, 0) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6f7ad94', endColorstr='#00ffffff',GradientType=1 ); }
-  .error-page h2 {
+.error-page h2 {
     margin: 55px 0 30px 0;
     font-size: 17px; }
-    .error-page h2:before {
+.error-page h2:before {
       width: 130px;
       height: 1px;
       position: relative;
@@ -124,7 +124,7 @@ html {
       background: -ms-radial-gradient(center, ellipse cover, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
       background: radial-gradient(ellipse at center, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a66f1919', endColorstr='#003c2c2c',GradientType=1 ); }
-    .error-page h2:after {
+.error-page h2:after {
       width: 130px;
       height: 1px;
       content: '';
@@ -145,6 +145,6 @@ html {
   text-decoration: none;
   color: #430400;
   font-size: 15px; }
-  .error-back:hover {
+.error-back:hover {
     color: #EB957D;
     text-shadow: 0 0 3px black; }

@@ -1,4 +1,6 @@
 
+<section class="page-header page-header-xs">
+        <div class="container">
 
 <div class="error-page-wrap">
   <article class="error-page gradient">
@@ -10,3 +12,5 @@
   </article>
 </div>
 
+</div>
+</section>
