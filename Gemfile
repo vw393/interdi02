@@ -60,3 +60,4 @@ gem 'globalize', '~> 5.0.1'
 
 gem 'paperclip', '~> 5.0.0.beta2'
 
+gem 'select2-rails'

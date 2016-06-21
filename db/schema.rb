@@ -46,9 +46,21 @@ ActiveRecord::Schema.define(version: 20160604204627) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "combination_translations", force: :cascade do |t|
+    t.integer  "combination_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.text     "descr"
+  end
+
+  add_index "combination_translations", ["combination_id"], name: "index_combination_translations_on_combination_id"
+  add_index "combination_translations", ["locale"], name: "index_combination_translations_on_locale"
+
   create_table "combinations", force: :cascade do |t|
     t.integer  "sensor_id"
     t.integer  "board_id"
+    t.text     "descr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

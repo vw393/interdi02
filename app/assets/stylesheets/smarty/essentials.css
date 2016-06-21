@@ -243,7 +243,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family:'Raleway','Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'ProximaNova-Light', 'Raleway','Open Sans',Arial,Helvetica,sans-serif;
 	font-weight:600;
 	color:#414141;
 
@@ -6499,6 +6499,8 @@ section.dark .pagination.pagination-simple>li:first-child>a {
 	color: #468847;
 	background-color: #dff0d8!important;
 }
+
+
 
 
 /** 34. Callouts

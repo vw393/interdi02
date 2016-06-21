@@ -2,7 +2,6 @@
 
 
 
-
 <section class="page-header page-header-xs">
 	<div class="container">
 
@@ -21,7 +20,7 @@
 	</div>
 </section>
 
-<header id="list-sensors">
+<header>
   <div class="container">
 
 <p id="notice"><%= notice %></p>
@@ -44,7 +43,7 @@
 
   <tbody>
     <% @sensors.each do |sensor| %>
-      <tr   data-link="<%= sensor_path(sensor) %>">
+      <tr class="sel-table-row" data-link="<%= sensor_path(sensor) %>" style="cursor: pointer">
         <td><%= sensor.pn %></td>
         <td><%= sensor.name %></td>
         <td><%= sensor.descr %></td>

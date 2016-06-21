@@ -18,13 +18,6 @@
 
 
 <p>
-<% @board.pictures.each do |picture| %>
-<%= picture.image_file_name %>
-<%= image_tag picture.image.url(:thumb) %>
-<% end %>
-</p>
-
-<p>
 <% @board.attachments.each do |attachment| %>
 <%= attachment.document_file_name %>
 <%= image_tag attachment.document.url(:thumb) %>

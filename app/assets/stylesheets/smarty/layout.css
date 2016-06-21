@@ -53,9 +53,8 @@ html, body {
 	height:100%;
 }
 body {
-	color:#888;
-	background-color:#f1f2f7;
-	background:#ffffff  url('/assets/grain_bg.png') repeat;
+	color:#444;
+	background:#fefefe  url('/assets/grain_bg.png') repeat;
 	font-family:'Open Sans',Arial,Helvetica,sans-serif;
 	-webkit-font-smoothing: antialiased;
 
@@ -70,7 +69,7 @@ body.has-video-bg section {
 
 body #wrapper {/* used by RTL*/
 	overflow:hidden; 
-	min-height:100%; /*  because short page hide long menus */
+	min-height:789px; /*  because short page hide long menus */
 }
 
 body.bg-grey,
@@ -1126,7 +1125,7 @@ section.dark.page-header ul.page-options a {
 	position: relative;
 	left:0; top:0; right:0;
 	z-index:1000;
-	background-color:#fff;
+	background-color: #fefefe;
 	border-bottom: rgba(0,0,0,0.05) 1px solid;
 
 	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.1) !important;
@@ -2923,7 +2922,7 @@ section.dark.page-header ul.page-options a {
 		border:#eee 1px solid;
 		border-top:#eee 0 solid;
 		list-style:none;
-		background-color:#fff;
+		background-color:#fefefe;
 		box-shadow:rgba(0,0,0,0.2) 0 6px 12px;
 		min-width:200px;
 		padding:0;
@@ -7062,14 +7061,14 @@ ul.search-history {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#313131',GradientType=0 );
 }
 #footer>.container {
-	padding-top:60px;
-	margin-bottom:60px;
+	padding-top:50px;
+	margin-bottom:30px;
 }
 
 #footer>.copyright {
 	background-color:rgba(0,0,0,0.2);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	padding:25px 0;
+	padding:12px 0;
 	font-size:13px;
 	display:block;
 }

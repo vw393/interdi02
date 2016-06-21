@@ -2,64 +2,170 @@
 
 
 <section class="page-header page-header-xs">
+        <div class="container">
+
+<!--
+                <h1>SENSORI TOUCH ( <%= params[:technology] ? Technology.find(params[:technology]).descr : "All" %> )</h1>
+-->
+                <h1> Scheda Sensore : <%= @sensor.pn %> </h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li class="active">Page Title</li>
+                </ol><!-- /breadcrumbs -->
+
+        </div>
+</section>
+
+
+
+
+
+<section class="page-header page-header-xs">
 	<div class="container">
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Pn:</strong>
-  <%= @sensor.pn %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @sensor.name %>
-</p>
-
-<p>
-  <strong>Descr:</strong>
-  <%= @sensor.descr %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @sensor.size %>
-</p>
-
-
-<p>
-<ol>
-  <% @sensor.attachments.each do |attachment| %>
-  <li>FILE NAME: <%= attachment.document_file_name %> | <%= attachment.document_content_type %></li>
-  <% end %>
-</ol>
-</p>
 
 
 
 
-<p>
-  <strong>Manufacturer:</strong>
-  <%= @sensor.manufacturer.name %>
-</p>
+<div class="row">
+  <div class="col-md-5">
 
-<p>
-  <strong>Sensor family:</strong>
-  <%= @sensor.sensor_family.name %>
-</p>
+    <div class="specs-css">
+
+    <h3> Specifiche:</h3>
+
+
+      <ul>
+  
+        <li>
+          <p>
+            <strong>Part Number:</strong>
+            <%= @sensor.pn %>
+          </p>
+        </li>
+  
+        <li>
+          <p>
+            <strong>Name:</strong>
+            <%= @sensor.name %>
+          </p>
+        </li>
+  
+        <li>
+          <p>
+            <strong>Size:</strong>
+            <%= @sensor.size %>
+          </p>
+        </li>
+  
+        <li>
+          <p>
+            <strong>Type:</strong>
+            <%= @sensor.sensor_family.name %>
+          </p>
+        </li>
+  
+        <li>
+          <p>
+            <strong>Technology:</strong>
+            <%= @sensor.sensor_family.technology.name %>
+          </p>
+        </li>
+  
+        <li>
+          <p>
+            <strong>Manufacturer:</strong>
+            <%= @sensor.manufacturer.name %>
+          </p>
+        </li>
+  
+  
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="col-md-7">
+
+    <div class="descr-css">
+
+    <h3> Descrizione:</h3>
+
+    <div class="module line-clamp">
+
+      <p> asdlakjd aslkasjald alsl alasdjal ka aslka aslkjad aslka al d adl askjd asl asdlkjas jdjaslkjasd asldajsd asdasd. asljas alaks aslkjdjas aslkdjas aslkajajd kasls  klaskd asjskask dlkas jasj asasdlkjas asdlkjasd.
+AAs d asdk asdlkjasd alkas laksdj   daslksa dkjas ajd lkasjd asd wqeu qoiqweo qweiue qwoei eqwiqweoiqwe qwoiqw qwoiqwe qoqwiqweoi qwe.
+Bba ad asldkjas adkbasdijbads abad asdbjas adjbasdkbasd m,asd ad kjasd lklasdl asd ( asldkjasd lasd m aij	qi	qmashs ajsh m,aSL as )
+AAs d asdk asdlkjasd alkas laksdj   daslksa dkjas ajd lkasjd asd wqeu qoiqweo qweiue qwoei eqwiqweoiqwe qwoiqw qwoiqwe qoqwiqweoi qwe.
+Bba ad asldkjas adkbasdijbads abad asdbjas adjbasdkbasd m,asd ad kjasd lklasdl asd ( asldkjasd lasd m aij	qi	qmashs ajsh m,aSL as )
+AAs d asdk asdlkjasd alkas laksdj   daslksa dkjas ajd lkasjd asd wqeu qoiqweo qweiue qwoei eqwiqweoiqwe qwoiqw qwoiqwe qoqwiqweoi qwe.
+Bba ad asldkjas adkbasdijbads abad asdbjas adjbasdkbasd m,asd ad kjasd lklasdl asd ( asldkjasd lasd m aij	qi	qmashs ajsh m,aSL as )
+rqwtwqe qwuyqw quuqwyetqwet qwuytqweuyt qwuytqwutyqwueyt qw qwuytqutqwu qwuyqwe yuqwe euyqwuyqe euytqwe qwuye quy qwetuyqwet e quytqwuyqw quyte  quweyt q quyqwe quytetqwuett tqeytqw qwuytq qwyteut qwe
+Bba ad asldkjas adkbasdijbads abad asdbjas adjbasdkbasd m,asd ad kjasd lklasdl asd ( asldkjasd lasd m aij	qi	qmashs ajsh m,aSL as )
+      </p>
+
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+
+
+    <p>
+      <strong>Attachments:</strong>
+    <ol>
+      <% @sensor.attachments.each do |attachment| %>
+      <li>FILE NAME: <%= attachment.document_file_name %> | <%= attachment.document_content_type %></li>
+      <% end %>
+    </ol>
+    </p>
+
+
+    <p>
+      <strong>Docs:</strong>
+    <ol>
+      <% @sensor.boards.each do |board| %>
+      <li>Board: <%= board.name %></li>
+      <% end %>
+    </ol>
+    </p>
+
+
+
+  </div>
+</div>
+
+
+
+
+               
+
+
+
+
+
 
 <%= link_to 'Edit', edit_sensor_path(@sensor) %> |
 <%= link_to 'Back', sensors_path %>
@@ -67,3 +173,14 @@
 
 </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+

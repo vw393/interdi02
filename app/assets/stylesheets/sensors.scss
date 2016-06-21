@@ -1,3 +1,52 @@
 // Place all the styles related to the Sensors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.specs-css {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  padding-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #e3eaef;
+  -webkit-box-shadow: 1px 1px 4px 1px rgba(28,25,25,0.4) ;
+  box-shadow: 1px 1px 4px 1px rgba(28,25,25,0.4) ;
+  -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1) 10ms;
+}
+
+.descr-css {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.module {
+  margin: 0 0 1em 0;
+  overflow: hidden;
+}
+
+.module p {
+  margin: 0;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;  
+}
+

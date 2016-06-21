@@ -35,6 +35,9 @@
   <link href="/assets/smarty/header-1.css" rel="stylesheet" type="text/css" />
   <link href="/assets/smarty/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
 
+
+  <link href="/assets/sensors.scss" rel="stylesheet" type="text/css" />
+
 <!--
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -280,7 +283,7 @@
                     <li class="divider"></li>
 
                     <li class="dropdown">
-                      <%= link_to "TOUCH CONTROLLERS" %>
+                      <%= link_to "CONTROLLERS", boards_path( :pagetitle => "Touch Controllers" ) %>
                     </li>
 
                     <li class="divider"></li>
@@ -341,8 +344,11 @@
 
 
 
+        <%= yield %>
 
-    <%= yield %>
+
+  </div>
+  <!-- /wrapper -->
 
 
 
@@ -488,9 +494,10 @@
   
   
 
+<!--
   </div>
   <!-- /wrapper -->
-
+-->
 
 
   <!-- SCROLL TO TOP -->
@@ -523,6 +530,9 @@
   <script type="text/javascript" src="/assets/smarty/slider.revolution/jquery.themepunch.tools.min.js"></script>
   <script type="text/javascript" src="/assets/smarty/slider.revolution/jquery.themepunch.revolution.min.js"></script>
   <script type="text/javascript" src="/assets/smarty/demo.revolution_slider.js"></script>
+
+  <script type="text/javascript" src="/assets/click-on-row.js"></script>
+
 
 </body>
 </html>

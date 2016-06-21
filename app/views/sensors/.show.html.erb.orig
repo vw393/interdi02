@@ -2,7 +2,30 @@
 
 
 <section class="page-header page-header-xs">
+        <div class="container">
+
+<!--
+                <h1>SENSORI TOUCH ( <%= params[:technology] ? Technology.find(params[:technology]).descr : "All" %> )</h1>
+-->
+                <h1> Scheda Sensore : <%= @sensor.pn %> </h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li class="active">Page Title</li>
+                </ol><!-- /breadcrumbs -->
+
+        </div>
+</section>
+
+
+
+
+
+<section class="page-header page-header-xs">
 	<div class="container">
+
 
 
 
@@ -30,9 +53,20 @@
 
 
 <p>
+  <strong>Attachments:</strong>
 <ol>
   <% @sensor.attachments.each do |attachment| %>
   <li>FILE NAME: <%= attachment.document_file_name %> | <%= attachment.document_content_type %></li>
+  <% end %>
+</ol>
+</p>
+
+
+<p>
+  <strong>Docs:</strong>
+<ol>
+  <% @sensor.boards.each do |board| %>
+  <li>Board: <%= board.name %></li>
   <% end %>
 </ol>
 </p>

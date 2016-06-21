@@ -1,28 +1,14 @@
 
 
-<section class="page-header page-header-xs">
-        <div class="container">
 
-                <h1> <%= params[:pagetitle] %> </h1>
-
-                <!-- breadcrumbs -->
-                <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li class="active">Page Title</li>
-                </ol><!-- /breadcrumbs -->
-
-        </div>
-</section>
-
-
-<header>
+<header id="list-sensors">
   <div class="container">
 
 
 
 <p id="notice"><%= notice %></p>
 
+<h1>Listing Boards</h1>
 
 <table  class="table table-hover custom">
   <thead>
@@ -39,9 +25,7 @@
       <tr>
         <td><%= board.pn %></td>
         <td><%= board.name %></td>
-<!--
         <td><%= board.descr %></td>
--->
 
         <% if user_signed_in? %>
           <td><%= link_to 'Show', board %></td>

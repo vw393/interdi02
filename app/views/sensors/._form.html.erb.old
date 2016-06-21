@@ -1,10 +1,3 @@
-
-
-
-<section class="page-header page-header-xs">
-        <div class="container">
-
-
 <%= simple_form_for @sensor, html: {multipart: true}  do |f| %>
   <% if @sensor.errors.any? %>
     <div id="error_explanation">
@@ -27,15 +20,11 @@
 
   <%= f.association :boards, label: 'AAAAA', :label_method => lambda { |b| "#{b.pn} - #{b.name}" } %>
 
-  <%= f.label :attachments, :class => 'control-label' %>
-  <%= file_field_tag "documents[]", type: :file, multiple: true %>
+    <%= f.label :attachments, :class => 'control-label' %>
+    <%= file_field_tag "documents[]", type: :file, multiple: true %>
 
   <%= f.association :manufacturer, :include_blank => false %>
   <%= f.association :sensor_family, :include_blank => false %>
   <%= f.button :submit %>
 
 <% end %>
-
-
-</div>
-</section>

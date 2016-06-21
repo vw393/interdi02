@@ -72,7 +72,16 @@ class SensorsController < ApplicationController
     end
   end
 
+
+# def not_selected
+#   @selected_boards = Sensor.boards
+#   @not_selected = 
+# end
+
+
+
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_sensor
       @sensor = Sensor.find(params[:id])
@@ -80,6 +89,7 @@ class SensorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
-      params.require(:sensor).permit(:pn, :name, :descr, :size, :manufacturer_id, :sensor_family_id)
+      params.require(:sensor).permit(:pn, :name, :descr, :size, :manufacturer_id, :sensor_family_id, :combination_ids => [], :board_ids => [])
     end
+
 end

@@ -1,1 +1,1 @@
-json.extract! @attachment, :id, :name, :descr, :documentable_id, :created_at, :updated_at
+json.extract! @attachment, :id, :name, :descr, :doc_id, :created_at, :updated_at

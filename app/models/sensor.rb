@@ -1,6 +1,8 @@
 class Sensor < ActiveRecord::Base
+
   
   has_many :combinations
+  has_many :boards, -> { order 'boards.id' }, through: :combinations
 
   has_many :attachments, as: :doc, :dependent => :destroy
 
